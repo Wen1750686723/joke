@@ -60,12 +60,12 @@
 </head>
 <body>
 <?php
-if ($_GET["id"]==null) {
+if (empty($_GET["id"])) {
 	$id=0;
 }else{
 	$id=$_GET["id"];
 }
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("127.0.0.1","root","");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
